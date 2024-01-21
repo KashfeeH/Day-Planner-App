@@ -35,8 +35,8 @@ function createTimeblock(hour) {
 //The resulting array of HTML strings is then joined into a single string and appended to the '.container' element on the page.
 
 var hours = Array.from({length: 10}, (_, i) => i + 8); 
-var timeBlocksHtml = hours.map(hour => createTimeblock(hour)).join('');
-$('.container').append(timeBlocksHtml);
+var timeBlock = hours.map(hour => createTimeblock(hour)).join('');
+$('.container').append(timeBlock);
 
 // for loop allows the code the efficient when retrieving values for each hour from local storage
 //i is initialized from hour 8 until 5pm
