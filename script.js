@@ -57,7 +57,7 @@ function calendarInteractivity() {
   var currentTime = dayjs().hour(); 
 
   $(".time-block").each(function () {
-      let $this = $(this);
+      var $this = $(this);
       var blockHour = parseInt($this.attr("id"));
       blockHour < currentTime ? $this.addClass("past").removeClass("future").removeClass("present") :
       blockHour === currentTime ? $this.removeClass("past").addClass("present").removeClass("future") :
